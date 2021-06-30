@@ -1,0 +1,318 @@
+*{
+    margin : 0px;
+    padding : 0px;
+    font-family: sans-serif;
+    background-color: #99A8B4;
+}
+
+#container{
+    width : 100vw;
+    height : 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar{
+    width: 20vw;
+    height : 75vh;
+    background-color: #363E47;
+    box-sizing: border-box;
+    display : grid;
+    grid-template-rows: 50px auto 50px;
+}
+
+#username{
+    background-color: antiquewhite;
+    display : flex;
+    color : #FCF6EE;
+    border-bottom: 1px solid #0E0E0E;
+}
+
+
+#username i{
+    background-color: #363E47;
+}
+
+#user1{
+    box-sizing: border-box;
+    background-color: #363E47;
+    font-size : 25px;
+    text-align: center;
+    width: 22%;
+    padding : 11px;
+}
+
+#user2{
+    box-sizing: border-box;
+    background-color: #363E47;
+    font-size : 17px;
+    width : 56%;
+    padding : 15px;
+}
+
+#user3{
+    box-sizing: border-box;
+    background-color: #363E47;
+    font-size : 17px;
+    text-align: center;
+    width : 22%;
+    padding : 15px;
+}
+
+#rooms{
+    background-color: #363E47;
+    display: flex;
+    flex-direction: column;
+    overflow : auto;
+    border-bottom: 1px solid #0E0E0E;
+}
+
+#rooms a{
+    background-color: #363E47;
+    cursor: pointer;
+}
+
+#rooms::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #363E47; 
+}
+
+#rooms::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+#rooms div{
+    min-width: 50px;
+    padding : 14px;
+    font-size: 20px;
+    color : #FCF6EE;
+    background-color: #363E47;
+}
+
+.selected{
+    border-left : 2px solid #00ff80;
+}
+
+#addRoom{
+    background-color: #363E47;
+    box-sizing: border-box;
+    padding : 11px;
+}
+
+#addRoom form{
+    background-color: #363E47; 
+}
+
+#addTF{
+    margin-left : 15px;
+    padding-left : 10px;
+    background-color: white;
+    border-radius: 15px;
+    border : none;
+    outline : none;
+    height : 25px;
+}
+
+#addBtn{
+    margin-left : 5px;
+    border:none;
+    background-color: #00ff80;
+    width : 25px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+#chats{
+    width: 40vw;
+    height :75vh;
+    background-color: #F2F7F7;
+    display: grid;
+    grid-template-rows: auto 50px;
+}
+
+#addChats{
+    background-color: white;
+}
+
+#addChats form,img{
+    background-color: white;
+}
+
+#sendMsgTF{
+    margin-top : 13px;
+    box-sizing: border-box;
+    background-color: white;
+    padding-left : 20px;
+    padding-bottom: 10px;
+    border : none;
+    outline: none;
+    height: 35px;
+    width : 85%;
+}
+
+#sendMsgBtn{
+    margin-top : 10px;
+    width : 14%;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    color : #00ff80;
+    border : none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#showChats{
+    background-color: #F2F7F7;
+    overflow: auto;
+    box-sizing: border-box;
+    padding : 15px;
+}
+
+#showChats::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #F2F7F7; 
+}
+
+#showChats::-webkit-scrollbar-thumb {
+    background: grey;
+    border: 1px;
+}
+
+#showChats table{
+    width : 100%;
+    background-color: #F2F7F7;
+}
+
+table td,p{
+    background-color: #F2F7F7;
+}
+
+table{
+    border-spacing: 0 10px;
+}
+
+.right{
+    float: right;
+    background-color: #00ff80;
+    padding : 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.rHead{
+    background-color: #00ff80;
+    font-size:small;
+    font-weight:bold;
+    padding : 3px;
+}
+
+.rBody{
+    background-color: #00ff80;
+    padding : 3px;
+}
+
+.rFoot{
+    background-color: #00ff80;
+    font-size:small;
+    font-weight:bold;
+    float: right;
+    padding : 5px;
+    color: black;
+}
+
+.left{
+    float: left;
+    background-color: white;
+    padding : 10px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.lHead{
+    background-color: white;
+    font-size:small;
+    font-weight:bold;
+    padding : 3px;
+}
+
+.lBody{
+    background-color: white;
+    padding : 3px;
+}
+
+.lFoot{
+    background-color: white;
+    font-size:small;
+    font-weight:bold;
+    padding : 5px;
+    color: gainsboro;
+}
+
+#popup-container{
+    display : none;
+    background-color: rgb(0,0,0,0.5);
+    position: fixed ;
+    width : 100vw;
+    height : 100vh;
+}
+
+#popup{
+   box-sizing: border-box;
+   background-color: white;
+   max-width: 400px;
+   height : 170px;
+   text-align: center;
+   margin : 17% auto;
+   padding : 20px;
+}
+
+#popup form,input,button,label{
+    background-color: white;
+}
+
+#popup input{
+    border : none;
+    background-color: #f8f9fa;
+    height : 30px;
+    outline : none;
+    padding-left : 5px;
+}
+
+#popup div{
+    display: inline-block;
+}
+
+#popup-update{
+    padding : 7px 12px;
+    background-color: #0d6efd;
+    border-radius: 5px;
+    color : white;
+    cursor: pointer;
+}
+
+#popup-close{
+    margin-top : 20px;
+    padding : 7px 12px;
+    background-color:crimson;
+    border-radius: 5px;
+    color : white;
+    cursor: pointer;
+}
+
+#popup-msg{
+    padding-top : 15px;
+    padding-bottom : 15px;
+    color : red; 
+    background-color: white;
+}
+
+
+
+
+

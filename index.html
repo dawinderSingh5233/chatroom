@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec31267c2f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="container">
+        <div id="popup-container">
+            <div id="popup">
+                 <div id="popup-body">
+                     <form>
+                         <div id="popup-msg"></div><br>
+                         <label for="updateTF">Enter Username</label>
+                         <input type="text" id="updateTF"><br>
+                         <div id="popup-update">Update</div>
+                         <div id="popup-close">Close</div>
+                     </form>
+                 </div>
+            </div>
+         </div>
+        <div id="sidebar">
+            <div id='username'>
+                <div id="user1"><i class="fas fa-user-circle"></i></div>
+                <div id="user2"></div>
+                <div id="user3"><i class="fas fa-pencil-alt"></i></div>
+            </div>
+            <div id="rooms">
+                <div class="selected"><a id="Default">Default</a></div>
+            </div>
+            <div id="addRoom">
+                <form>
+                    <input type="text" id="addTF" placeholder="add new room">
+                    <button id="addBtn">+</button>
+                </form>
+            </div>
+        </div>
+        <div id="chats">
+            <div id="showChats">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="right">
+                                <div class="rBody">hello how are you?</div>
+                                <div class="rFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="left">
+                                <div class="lHead">gaming</div>
+                                <div class="lBody">I am good!</div>
+                                <div class="lFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="left">
+                                <div class="lHead">gaming</div>
+                                <div class="lBody">What about you?</div>
+                                <div class="lFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="right">
+                                <div class="rBody">I am fine too!</div>
+                                <div class="rFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="right">
+                                <div class="rBody">hello how are you?</div>
+                                <div class="rFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="left">
+                                <div class="lHead">gaming</div>
+                                <div class="lBody">I am good!</div>
+                                <div class="lFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="left">
+                                <div class="lHead">gaming</div>
+                                <div class="lBody">What about you?</div>
+                                <div class="lFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="right">
+                                <div class="rBody">I am fine too!</div>
+                                <div class="rFoot">now</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="addChats">
+                <form>
+                    <input type="text" id="sendMsgTF" placeholder="Type something to send">
+                    <button id="sendMsgBtn"><img src="send.svg"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyA3mlvzD6ttnNzidF5lfkQ4xXsRnEAQ4ds",
+    authDomain: "learningjs-b8fe0.firebaseapp.com",
+    projectId: "learningjs-b8fe0",
+    storageBucket: "learningjs-b8fe0.appspot.com",
+    messagingSenderId: "503843936864",
+    appId: "1:503843936864:web:e3ea0f867aa3365ff18105",
+    measurementId: "G-HE9CXXTEJT"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  const db = firebase.firestore();
+</script>
+
+<script src="chatroom.js"></script>
+<script src="chatUI.js"></script>
+<script src="app.js"></script>
+</html>
